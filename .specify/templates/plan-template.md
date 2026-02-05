@@ -36,6 +36,7 @@
 - [ ] **III. Council & Adversarial Protocol**: 5-agent swarm logic preserved?
 - [ ] **IV. Mechanical Fidelity**: Rule-Sage auditing + CSPRNG/EntropyProof?
 - [ ] **V. Async-First**: All I/O asynchronous? DuckDB pipeline efficient?
+- [ ] **VI. MCP-First Tooling**: Infrastructure/GCP/GitHub operations use MCP?
 
 ## Project Structure
 

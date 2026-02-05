@@ -7,7 +7,7 @@ description: "Task list template for feature implementation"
 
 **Input**: Design documents from `/specs/[###-feature-name]/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
-**Guidance**: [Meta-Oracle Constitution v2.7.0](file:///c:/Users/bfoxt/vindicta-platform/Meta-Oracle/.specify/memory/constitution.md) (Rule 19 Mandatory)
+**Guidance**: [Meta-Oracle Constitution v2.8.0](file:///c:/Users/bfoxt/vindicta-platform/Meta-Oracle/.specify/memory/constitution.md) (Rule 19 & MCP-First Mandatory)
 
 **Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
 
