@@ -1,25 +1,11 @@
-<<<<<<< HEAD
-"""Meta-Oracle council agents."""
+"""Meta-Oracle council agents and stubs."""
 from meta_oracle.agents.base import BaseAgent
 from meta_oracle.agents.home import HomeAgent
 from meta_oracle.agents.adversary import AdversaryAgent
 from meta_oracle.agents.arbiter import ArbiterAgent
 from meta_oracle.agents.rule_sage import RuleSageAgent
 from meta_oracle.agents.chaos import ChaosAgent
-
-__all__ = [
-    "BaseAgent",
-    "HomeAgent",
-    "AdversaryAgent",
-    "ArbiterAgent",
-    "RuleSageAgent",
-    "ChaosAgent",
-]
-=======
-"""Stub agents for Meta-Oracle testing."""
-
 from meta_oracle.protocol import AgentRole, Argument, ArgumentType, OracleAgent, DebateRound
-
 
 class StubAgent(OracleAgent):
     """A stub agent for testing that returns hardcoded responses."""
@@ -54,4 +40,13 @@ class StubAgent(OracleAgent):
             "reasoning": f"{self.role.value} votes for player {winner}",
             "upset": self.role == AgentRole.CHAOS
         }
->>>>>>> 5878dc7b96cb32dc4d217c6ec353609fa473b90e
+
+__all__ = [
+    "BaseAgent",
+    "HomeAgent",
+    "AdversaryAgent",
+    "ArbiterAgent",
+    "RuleSageAgent",
+    "ChaosAgent",
+    "StubAgent",
+]

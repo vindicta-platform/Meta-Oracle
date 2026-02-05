@@ -12,6 +12,7 @@ def run_demo():
     print("\nRunning 5-agent council debate with local Ollama inference...")
     print("This may take a few minutes depending on your hardware.\n")
     
+    # TODO: Setup with pydantic settings for env drive
     # Configure for local model - try common models
     config = OllamaConfig(
         model="llama3.2",  # Change to "mistral" or "gemma2" if needed
