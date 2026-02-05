@@ -1,15 +1,49 @@
 # Meta-Oracle Roadmap
 
-> **Vision**: 5-agent AI Council for meta predictions and upset detection  
+> **Vision**: Five Minds, One Truth — AI Council for meta predictions  
 > **Status**: Active Development  
-> **Last Updated**: 2026-02-03
+> **Last Updated**: 2026-02-04
 
 ---
 
-## v1.0 Target: April 2026
+## 📅 6-Week Schedule (Feb 4 - Mar 17, 2026)
+
+> **GitHub Project**: https://github.com/orgs/vindicta-platform/projects/4  
+> **Master Roadmap**: https://github.com/vindicta-platform/.github/blob/master/ROADMAP.md
+
+### Week 2: Feb 11-17 — Foundation
+| Day | Task | Priority |
+|-----|------|----------|
+| Mon 11 | DebateEngine core implementation | P1 |
+| Tue 12 | Stub agent implementations | P1 |
+| Wed 13 | Home agent implementation | P1 |
+| Thu 14 | Adversary agent implementation | P1 |
+| **Sun 17** | **v0.1.0 Foundation Release** | ⭐ |
+
+### Week 4: Feb 25 - Mar 3 — Agent Implementation
+| Day | Task | Priority |
+|-----|------|----------|
+| Mon 25 | Arbiter agent implementation | P1 |
+| Tue 26 | Rule-Sage agent implementation | P1 |
+| Wed 27 | Council protocol (part 1) | P1 |
+| Thu 28 | Council protocol (part 2) | P1 |
+| Fri 1 | Integration tests | P1 |
+| **Sun 3** | **v0.2.0 Agents Release** | ⭐ |
+
+### Week 6: Mar 11-17 — User Features
+| Day | Task | Priority |
+|-----|------|----------|
+| Mon 11 | List Grader API | P1 |
+| Tue 12 | Upset Detector feature | P1 |
+| Wed 13 | Integration testing | P1 |
+| **Sun 17** | **v0.3.0 User Features Release** | ⭐ |
+
+---
+
+## v1.0 Target: April 15, 2026
 
 ### Mission Statement
-Deliver a production-ready AI debate engine where 5 specialized agents collaboratively analyze army lists, predict tournament outcomes, and identify meta upsets through adversarial reasoning.
+Deliver a production-ready AI Council that provides meta predictions, army rankings, and upset detection through structured adversarial debate between 5 specialized agents.
 
 ---
 
@@ -20,133 +54,86 @@ Deliver a production-ready AI debate engine where 5 specialized agents collabora
 │  Feb 2026          Mar 2026          Apr 2026                   │
 │  ─────────────────────────────────────────────────────────────  │
 │  [v0.1.0]          [v0.2.0]          [v0.3.0]      [v1.0.0]     │
-│  Foundation        Agents           Features       Production   │
+│  Foundation        Agents            Features      Production   │
 │                                                                  │
-│  Week 1-2          Week 3-4          Week 5-6      Week 7-8     │
+│  Week 2            Week 4            Week 6        Week 10+     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## v0.1.0 — Foundation (Target: Feb 14, 2026)
+## v0.1.0 — Foundation (Target: Feb 17, 2026)
 
 ### Deliverables
-- [ ] Extract meta_oracle module from platform-core
-- [ ] Define OracleAgent protocol
-- [ ] Implement DebateEngine core
-- [ ] Create stub agents (hardcoded responses)
-- [ ] Debate transcript serialization
-
-### Key Measurable Results
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| **Debate Execution** | Complete 5-round debate | Integration test |
-| **Transcript Format** | JSON serializable | Schema validation |
-| **Agent Protocol** | All 5 agents implement interface | Type checking |
+- [ ] Extract meta_oracle from platform-core
+- [ ] Define agent interfaces
+- [ ] DebateEngine core implementation
+- [ ] Stub agent implementations (all 5)
+- [ ] Home agent (advocate for player's list)
+- [ ] Adversary agent (argue against)
 
 ### Exit Criteria
-- [ ] Run mock debate with stub agents
-- [ ] Transcript viewable as JSON
-- [ ] Agent interface documented
+- [ ] Basic debate flow works
+- [ ] 2 agents can exchange arguments
+- [ ] Integration with Agent-Auditor-SDK
 
 ---
 
-## v0.2.0 — Agent Implementation (Target: Feb 28, 2026)
+## v0.2.0 — Agent Implementation (Target: Mar 3, 2026)
 
 ### Deliverables
-- [ ] Home agent (Gemini-powered)
-- [ ] Adversary agent
-- [ ] Arbiter agent with DuckDB backend
-- [ ] Rule-Sage agent with WARScribe-Core validation
-- [ ] Council synthesizer
-- [ ] Agent-Auditor-SDK integration
-
-### Key Measurable Results
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| **Real Debates** | 10+ debates with live agents | Manual review |
-| **Quota Usage** | <10 tokens per debate | Agent-Auditor logs |
-| **Rule-Sage Accuracy** | 95%+ correct rule citations | Manual audit |
+- [ ] Arbiter agent (neutral judging)
+- [ ] Rule-Sage agent (rules expertise)
+- [ ] Observer agent (historical data)
+- [ ] Council debate protocol
+- [ ] Verdict aggregation
 
 ### Exit Criteria
-- [ ] Full 5-agent debate on real query
-- [ ] Debates execute within quota budget
-- [ ] Rule citations validated
+- [ ] All 5 agents participate in debates
+- [ ] Structured debate transcripts
+- [ ] Reproducible verdicts
 
 ---
 
-## v0.3.0 — User-Facing Features (Target: Mar 14, 2026)
+## v0.3.0 — User Features (Target: Mar 17, 2026)
 
 ### Deliverables
-- [ ] Meta Snapshot API (`/api/meta/snapshot`)
-- [ ] List Grader API (`/api/meta/grade`)
-- [ ] Upset Detector API (`/api/meta/upsets`)
-- [ ] Debate Transcript UI component
-- [ ] Stat Check integration
-
-### Key Measurable Results
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| **API Response Time** | <5 seconds for grade | Performance test |
-| **Upset Detection** | Surface 10+ upsets | Query test data |
-| **UI Integration** | Viewable in Portal | E2E test |
+- [ ] List Grader API endpoint
+- [ ] Upset Detector (identify giant-killer lists)
+- [ ] Meta Snapshot display
+- [ ] Historical prediction tracking
 
 ### Exit Criteria
 - [ ] Grade a list via API
-- [ ] View debate transcript in Portal
-- [ ] Upset detector returns valid results
+- [ ] Surface unexpected high-performers
+- [ ] Track prediction accuracy
 
 ---
 
-## v1.0.0 — Production Release (Target: Apr 15, 2026)
+## v1.0.0 — Production (Target: Apr 15, 2026)
 
 ### Deliverables
-- [ ] Tournament prediction tracking
-- [ ] Public accuracy dashboard
-- [ ] Community feedback integration
+- [ ] Tournament prediction system
+- [ ] Accuracy dashboard
 - [ ] PyPI publication
-- [ ] Agent personality refinement
-
-### Key Measurable Results
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| **Prediction Accuracy** | 70%+ correct | Tracked predictions |
-| **Predictions Tracked** | 50+ predictions | Database count |
-| **API Uptime** | 99%+ | Monitoring |
-| **User Satisfaction** | 4+ star rating | Feedback survey |
+- [ ] 70%+ prediction accuracy
 
 ### Exit Criteria
-- [ ] 50+ tracked predictions
-- [ ] 70%+ accuracy documented
-- [ ] No critical bugs for 2 weeks
+- [ ] Public prediction tracking
+- [ ] Community-validated accuracy
+- [ ] Stable API for Portal integration
 
 ---
 
-## Key Data Sources
+## The Council: 5 Agents
 
-### Internal
-- WARScribe Transcripts
-- Primordia AI game analysis
-- Tournament results (BCP, ITC scraping)
-
-### External
-- **Stat Check**: Tournament statistics
-- **Goonhammer**: Weekly meta reports
-- **Podcasts**: Community meta discussion
-- **Warmasters**: Team tournament data
-- **WTC Results**: World Team Championship
-
----
-
-## Council Agents
-
-| Agent | Role | Personality |
-|-------|------|-------------|
-| 🏠 **Home** | Advocate | Optimistic, finds strengths |
-| ⚔️ **Adversary** | Devil's Advocate | Skeptical, finds weaknesses |
-| 📊 **Arbiter** | Data Scientist | Neutral, cites statistics |
-| 📜 **Rule-Sage** | Rules Lawyer | Precise, validates claims |
-| 👑 **Council** | Judge | Synthesizing, final verdict |
+| Agent | Role | Specialty |
+|-------|------|-----------|
+| **Home** | Advocate | Argues FOR the player's list |
+| **Adversary** | Devil's advocate | Argues AGAINST the list |
+| **Arbiter** | Neutral judge | Weighs evidence, makes verdict |
+| **Rule-Sage** | Expert | Validates mechanics and rules claims |
+| **Observer** | Historian | Provides historical context and precedent |
 
 ---
 
@@ -155,28 +142,17 @@ Deliver a production-ready AI debate engine where 5 specialized agents collabora
 | Dependency | Status | Notes |
 |------------|--------|-------|
 | Agent-Auditor-SDK | 🔄 Parallel | Quota management |
-| WARScribe-Core | 🔄 Parallel | Rule validation |
-| DuckDB | ✅ Available | Statistics backend |
-| Gemini API | ✅ Available | Agent LLM |
-
----
-
-## Risks
-
-| Risk | Probability | Impact | Mitigation |
-|------|-------------|--------|------------|
-| AI hallucinations | Medium | High | Rule-Sage validation |
-| Token costs too high | Medium | Medium | Agent-Auditor quota |
-| Predictions wrong publicly | Medium | High | Transparent accuracy tracking |
+| Primordia AI | 🔄 Parallel | Position evaluation (optional) |
+| WARScribe-Core | 🔄 Parallel | List parsing |
 
 ---
 
 ## Success Criteria for v1
 
 1. **Accuracy**: 70%+ prediction accuracy tracked publicly
-2. **Trust**: Users can view full debate reasoning
-3. **Adoption**: 100+ debates run per month
-4. **Differentiation**: "Giant killer" lists identified monthly
+2. **Coverage**: Grade any valid army list
+3. **Transparency**: Debate transcripts available
+4. **Community Trust**: Monthly "Giant Killer" identification
 
 ---
 
