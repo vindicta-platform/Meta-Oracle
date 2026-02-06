@@ -47,3 +47,7 @@ curl -X POST http://localhost:8000/api/v1/grade \
   -H "Content-Type: application/json" \
   -d '{"army_list": {"faction": "Space Marines", "units": [{"name": "Captain", "points": 100}]}}'
 ```
+
+---
+
+*Last Updated: 2026-02-06*
