@@ -5,6 +5,7 @@
 **Issue Reference**: #8  
 **Version**: 1.3  
 **Status**: ✅ Clarified  
+**Last Updated**: 2026-02-06
 
 ---
 
