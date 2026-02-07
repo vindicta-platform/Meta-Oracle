@@ -137,30 +137,3 @@ class DebateEngine:
         for vote in transcript.votes:
             role = vote.agent_role.value.upper().replace("_", "-")
             print(f"   • {role}: {vote.prediction} ({vote.win_probability*100:.0f}%)")
-
-    def run_grading_session(self, army_list: "meta_oracle.models.ArmyList") -> DebateTranscript:
-        """Execute a debate to grade a single army list.
-        
-        Args:
-            army_list: The army list to grade
-            
-        Returns:
-            Transcript containing the evaluation debate
-        """
-        # Format units into a readable string
-        unit_details = "\n".join(
-            [f"- {u.name} ({u.points} pts): {', '.join(u.wargear)}" for u in army_list.units]
-        )
-        player1_list = f"Faction: {army_list.faction}\nDetachment: {army_list.detachment or 'Unknown'}\nUnits:\n{unit_details}"
-        
-        context = DebateContext(
-            player1_faction=army_list.faction,
-            player1_list=player1_list,
-            player2_faction="Meta Challenger",
-            player2_list="A generic competitive list representing the current tournament meta.",
-            mission="Grand Tournament: Leviathan",
-            terrain="WTC Standard Layout",
-            additional_context="Grading requested for competitive viability."
-        )
-        
-        return self.run_debate(context)
